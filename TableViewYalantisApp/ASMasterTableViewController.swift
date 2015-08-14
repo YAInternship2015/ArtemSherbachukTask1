@@ -10,9 +10,13 @@ import UIKit
 
 class ASMasterTableViewController: UITableViewController {
 
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
+    tableView.estimatedRowHeight = 80
+    tableView.rowHeight = UITableViewAutomaticDimension
+    
   }
 
 
@@ -21,25 +25,29 @@ class ASMasterTableViewController: UITableViewController {
 
   // MARK: - Table view data source
 
-  override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    // #warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0
-  }
-
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    // #warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0
+
+    return 10
   }
 
 
   override func tableView(tableView: UITableView, cellForRowAtIndexPath
     indexPath: NSIndexPath) -> UITableViewCell {
-      let cell = tableView.dequeueReusableCellWithIdentifier("MasterCell", forIndexPath: indexPath) as! UITableViewCell
+      let cell = tableView.dequeueReusableCellWithIdentifier("MasterCell", forIndexPath: indexPath) as! ASMasterCell
 
+      let data = ASDataSource(index: indexPath.row)
+
+      cell.cellImageView.image = data.imageData
+      cell.cellLabelText.text = data.textData
 
       return cell
+  }
+
+
+
+  //MARK: Style TableView
+  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
   }
 
 

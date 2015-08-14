@@ -8,6 +8,23 @@
 
 import UIKit
 
-class DataSource: NSObject {
-   
+class ASDataSource {
+
+  private var data = [
+    "image": ["avatar1", "avatar2", "avatar3", "avatar1", "avatar2", "avatar3", "avatar1", "avatar2", "avatar3", "avatar1"],
+    "text": ["avatar1", "avatar2", "avatar3", "avatar1", "avatar2", "avatar3", "avatar1", "avatar2", "avatar3", "avatar1"]]
+
+  let imageData: UIImage
+  let textData: String
+
+  init(index: Int) {
+
+    let image = data["image"]!
+    let text = data["text"]!
+
+    imageData = UIImage(named: image[index])!
+    textData = text[index]
+
+  }
+
 }

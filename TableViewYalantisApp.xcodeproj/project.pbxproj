@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FC234FEF1B7E62B1008E970E /* ASMasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC234FEE1B7E62B1008E970E /* ASMasterTableViewController.swift */; };
 		FC234FF11B7E63D2008E970E /* ASMasterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC234FF01B7E63D2008E970E /* ASMasterCell.swift */; };
+		FC234FF51B7E66DD008E970E /* ASDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC234FF41B7E66DD008E970E /* ASDataSource.swift */; };
 		FCE08F8C1B7E611E0071A7AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE08F8B1B7E611E0071A7AD /* AppDelegate.swift */; };
 		FCE08F911B7E611E0071A7AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCE08F8F1B7E611E0071A7AD /* Main.storyboard */; };
 		FCE08F931B7E611E0071A7AD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCE08F921B7E611E0071A7AD /* Images.xcassets */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		FC234FEE1B7E62B1008E970E /* ASMasterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASMasterTableViewController.swift; sourceTree = "<group>"; };
 		FC234FF01B7E63D2008E970E /* ASMasterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASMasterCell.swift; sourceTree = "<group>"; };
+		FC234FF41B7E66DD008E970E /* ASDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASDataSource.swift; sourceTree = "<group>"; };
 		FCE08F861B7E611E0071A7AD /* TableViewYalantisApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewYalantisApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE08F8A1B7E611E0071A7AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCE08F8B1B7E611E0071A7AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,14 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		FC234FF61B7E6E6D008E970E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC234FF41B7E66DD008E970E /* ASDataSource.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		FCE08F7D1B7E611D0071A7AD = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				FCE08F8B1B7E611E0071A7AD /* AppDelegate.swift */,
+				FC234FF61B7E6E6D008E970E /* Model */,
 				FC234FF31B7E63E6008E970E /* Controller */,
 				FC234FF21B7E63E0008E970E /* View */,
 				FCE08F8F1B7E611E0071A7AD /* Main.storyboard */,
@@ -233,6 +244,7 @@
 			files = (
 				FCE08F8C1B7E611E0071A7AD /* AppDelegate.swift in Sources */,
 				FC234FF11B7E63D2008E970E /* ASMasterCell.swift in Sources */,
+				FC234FF51B7E66DD008E970E /* ASDataSource.swift in Sources */,
 				FC234FEF1B7E62B1008E970E /* ASMasterTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

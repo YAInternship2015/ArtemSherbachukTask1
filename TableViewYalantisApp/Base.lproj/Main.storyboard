@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="295-AP-yYu">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Master Table View Controller-->
+        <!--TableViewApp-->
         <scene sceneID="N0Y-sF-NIA">
             <objects>
                 <tableViewController id="nAZ-J8-W5C" customClass="ASMasterTableViewController" customModule="TableViewYalantisApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,28 +18,33 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LN2-m9-V9h" id="Y8e-If-nHy">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6S-gu-3OK">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6S-gu-3OK">
                                             <rect key="frame" x="66" y="29" width="526" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rib-at-Pkd">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar1" translatesAutoresizingMaskIntoConstraints="NO" id="Rib-at-Pkd">
                                             <rect key="frame" x="8" y="15" width="50" height="50"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="50" id="0dK-Oc-XSQ"/>
-                                                <constraint firstAttribute="height" constant="50" id="Zap-ev-cFP"/>
+                                                <constraint firstAttribute="height" constant="50" id="1bW-XI-iXn"/>
+                                                <constraint firstAttribute="width" constant="50" id="pE6-g4-CXB"/>
                                             </constraints>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="p6S-gu-3OK" firstAttribute="leading" secondItem="Rib-at-Pkd" secondAttribute="trailing" constant="8" id="FeL-p0-I4S"/>
-                                        <constraint firstItem="p6S-gu-3OK" firstAttribute="top" secondItem="Y8e-If-nHy" secondAttribute="top" constant="29" id="JGp-KZ-QuF"/>
-                                        <constraint firstAttribute="trailing" secondItem="p6S-gu-3OK" secondAttribute="trailing" constant="8" id="auI-Kw-z8x"/>
-                                        <constraint firstItem="Rib-at-Pkd" firstAttribute="leading" secondItem="Y8e-If-nHy" secondAttribute="leadingMargin" id="fNz-CG-9is"/>
-                                        <constraint firstItem="Rib-at-Pkd" firstAttribute="top" secondItem="Y8e-If-nHy" secondAttribute="topMargin" constant="7" id="rIj-BU-aoB"/>
+                                        <constraint firstAttribute="trailing" secondItem="p6S-gu-3OK" secondAttribute="trailing" constant="8" id="9Qf-Tp-dHk"/>
+                                        <constraint firstAttribute="bottom" secondItem="Rib-at-Pkd" secondAttribute="bottom" constant="14" id="AIy-4y-hRI"/>
+                                        <constraint firstItem="p6S-gu-3OK" firstAttribute="leading" secondItem="Rib-at-Pkd" secondAttribute="trailing" constant="8" id="EB0-jw-WVR"/>
+                                        <constraint firstItem="p6S-gu-3OK" firstAttribute="top" secondItem="Rib-at-Pkd" secondAttribute="top" constant="14" id="FYD-Sz-IBo"/>
+                                        <constraint firstItem="Rib-at-Pkd" firstAttribute="leading" secondItem="Y8e-If-nHy" secondAttribute="leading" constant="8" id="cuQ-WH-gxC"/>
+                                        <constraint firstItem="Rib-at-Pkd" firstAttribute="top" secondItem="Y8e-If-nHy" secondAttribute="top" constant="15" id="e0V-VH-TAf"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellImageView" destination="Rib-at-Pkd" id="bh8-OU-DH0"/>
+                                    <outlet property="cellLabelText" destination="p6S-gu-3OK" id="teD-ug-QHv"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -48,10 +52,33 @@
                             <outlet property="delegate" destination="nAZ-J8-W5C" id="TDs-j8-trc"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="TableViewApp" id="8d4-Rq-stE"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFi-s5-foT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="260" y="202"/>
+            <point key="canvasLocation" x="1072" y="202"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aTV-Wj-HAi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="295-AP-yYu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KGI-TB-cKz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.8862745098" green="0.30588235289999999" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nAZ-J8-W5C" kind="relationship" relationship="rootViewController" id="yD2-fw-aCv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XxV-Ey-9P6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="398" y="202"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="avatar1" width="80" height="80"/>
+    </resources>
 </document>
