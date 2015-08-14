@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC234FEF1B7E62B1008E970E /* ASMasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC234FEE1B7E62B1008E970E /* ASMasterTableViewController.swift */; };
+		FC234FF11B7E63D2008E970E /* ASMasterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC234FF01B7E63D2008E970E /* ASMasterCell.swift */; };
 		FCE08F8C1B7E611E0071A7AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE08F8B1B7E611E0071A7AD /* AppDelegate.swift */; };
-		FCE08F8E1B7E611E0071A7AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE08F8D1B7E611E0071A7AD /* ViewController.swift */; };
 		FCE08F911B7E611E0071A7AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCE08F8F1B7E611E0071A7AD /* Main.storyboard */; };
 		FCE08F931B7E611E0071A7AD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCE08F921B7E611E0071A7AD /* Images.xcassets */; };
 		FCE08F961B7E611E0071A7AD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE08F941B7E611E0071A7AD /* LaunchScreen.xib */; };
@@ -26,10 +27,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC234FEE1B7E62B1008E970E /* ASMasterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASMasterTableViewController.swift; sourceTree = "<group>"; };
+		FC234FF01B7E63D2008E970E /* ASMasterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASMasterCell.swift; sourceTree = "<group>"; };
 		FCE08F861B7E611E0071A7AD /* TableViewYalantisApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewYalantisApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE08F8A1B7E611E0071A7AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCE08F8B1B7E611E0071A7AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FCE08F8D1B7E611E0071A7AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FCE08F901B7E611E0071A7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FCE08F921B7E611E0071A7AD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FCE08F951B7E611E0071A7AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -56,6 +58,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC234FF21B7E63E0008E970E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC234FF01B7E63D2008E970E /* ASMasterCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FC234FF31B7E63E6008E970E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC234FEE1B7E62B1008E970E /* ASMasterTableViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		FCE08F7D1B7E611D0071A7AD = {
 			isa = PBXGroup;
 			children = (
@@ -78,7 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				FCE08F8B1B7E611E0071A7AD /* AppDelegate.swift */,
-				FCE08F8D1B7E611E0071A7AD /* ViewController.swift */,
+				FC234FF31B7E63E6008E970E /* Controller */,
+				FC234FF21B7E63E0008E970E /* View */,
 				FCE08F8F1B7E611E0071A7AD /* Main.storyboard */,
 				FCE08F921B7E611E0071A7AD /* Images.xcassets */,
 				FCE08F941B7E611E0071A7AD /* LaunchScreen.xib */,
@@ -212,8 +231,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCE08F8E1B7E611E0071A7AD /* ViewController.swift in Sources */,
 				FCE08F8C1B7E611E0071A7AD /* AppDelegate.swift in Sources */,
+				FC234FF11B7E63D2008E970E /* ASMasterCell.swift in Sources */,
+				FC234FEF1B7E62B1008E970E /* ASMasterTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +429,7 @@
 				FCE08FA71B7E611E0071A7AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FCE08FA81B7E611E0071A7AD /* Build configuration list for PBXNativeTarget "TableViewYalantisAppTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +438,7 @@
 				FCE08FAA1B7E611E0071A7AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
