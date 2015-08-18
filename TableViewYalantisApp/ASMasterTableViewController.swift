@@ -14,19 +14,19 @@ class ASMasterTableViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
+// FIXME: достаточно было задать высоту ячейки прямо в сториборде, тогда бы не потребовалось кода вообще
     tableView.estimatedRowHeight = 80
     tableView.rowHeight = UITableViewAutomaticDimension
     
   }
 
-
-
+// FIXME: зачем здесь так много пустых строк?)
 
 
   // MARK: - Table view data source
 
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
+// FIXME: так тоже делать не стоит. Вы должны спрашивать у датасорса, сколько у него есть объектов-моделей. Соответственно именно столько ячеек и будет в таблице
     return 10
   }
 
